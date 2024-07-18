@@ -1,6 +1,6 @@
 #include"../include/Board.hpp"
 
-Board::Board(size_t size)
+Board::Board(unsigned int size = 20)
 {
     _size = size;
     matrix.reserve(_size);
@@ -10,12 +10,12 @@ Board::Board(size_t size)
     }
 }
 
-char Board::getPos(size_t n, size_t m)
+char Board::getPos(unsigned int n, unsigned int m)
 {
     return matrix[n][m];
 }
 
-void Board::setPos(size_t n, size_t m, char element)
+void Board::setPos(unsigned int n, unsigned int m, char element)
 {
     matrix[n][m] = element;
 }

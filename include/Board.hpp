@@ -8,12 +8,12 @@
 class Board
 {
 public:
-    Board(size_t size);
+    Board(unsigned int size);
 
-    char getPos(size_t n, size_t m);
-    void setPos(size_t n, size_t m, char element);
+    char getPos(unsigned int n, unsigned int m);
+    void setPos(unsigned int n, unsigned int m, char element);
 private:
-    size_t _size;
+    unsigned int _size;
     std::vector<std::vector<char>> matrix;
 };
 

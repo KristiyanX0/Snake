@@ -3,16 +3,33 @@
 
 #include<iostream>
 #include<vector>
-#include<utility>
+#include<stdexcept>
+
+typedef enum class Directions {
+    Right,
+    Left,
+    Up,
+    Down
+} Direction;
+
+typedef struct Seg {
+    unsigned int X;
+    unsigned int Y;
+    Direction direction;
+} Segment;
 
 class Snake
 {
 public:
-    Snake(size_t starting_size = 5);
-    void setHeadPos(size_t posX, size_t posY);
+    Snake(unsigned int starting_size);
+    void setHeadPosition(unsigned int X, unsigned int Y);
+    void move(unsigned int places);
+    void setHeadDirection(Direction dir);
+    Direction getHeadDirection();
+    void grow(int size_diff);
 private:
-    size_t _size;
-    std::vector<std::pair<size_t, size_t>> SnakePos;
+    unsigned int _size;
+    std::vector<Segment> _SnakeSegments;
 };
 
 #endif // SNAKE_HPP

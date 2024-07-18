@@ -9,6 +9,6 @@ private:
     std::vector<std::pair<int,int>> SnakePos;
 public:
     Game(Snake* snake);
-}
+};
 
 #endif // GAME_HPP
