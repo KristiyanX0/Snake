@@ -23,12 +23,12 @@ class Snake
 public:
     Snake(unsigned int starting_size);
     void setHeadPosition(unsigned int X, unsigned int Y);
-    void move(unsigned int places);
+    void move(unsigned int positions);
     void setHeadDirection(Direction dir);
     Direction getHeadDirection();
-    void grow(int size_diff);
-private:
-    unsigned int _size;
+    void grow(unsigned int size_difference);
+    size_t size();
+private: 
     std::vector<Segment> _SnakeSegments;
 };
 
