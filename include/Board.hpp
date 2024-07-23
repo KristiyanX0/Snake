@@ -8,6 +8,7 @@
 class Board
 {
 public:
+    Board();
     Board(unsigned int size);
 
     char getPos(unsigned int n, unsigned int m);

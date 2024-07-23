@@ -1,10 +1,9 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
+#include <memory>
 #include"../include/Run.hpp"
-
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
+#include"../include/Game.hpp"
 
 Runner* Runner::runner = nullptr;
 
@@ -17,7 +16,12 @@ Runner& Runner::getInstance() {
 
 void Runner::start() {
     std::cout << "Game starting ..." << std::endl;
-    
+
+    // TO REWORK
+    std::unique_ptr<Snake> snake(new Snake());
+    std::unique_ptr<Board> board(new Board());
+    std::unique_ptr<Game> game(new Game(*snake, *board));
+
 }
 
 Runner::Runner() {}

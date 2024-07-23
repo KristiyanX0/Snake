@@ -1,6 +1,12 @@
 #include"../include/Board.hpp"
+#define DEFAULT_SIZE 30
 
-Board::Board(unsigned int size = 20)
+Board::Board()
+{
+    Board(DEFAULT_SIZE);
+}
+
+Board::Board(unsigned int size)
 {
     _size = size;
     matrix.reserve(_size);

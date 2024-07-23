@@ -21,6 +21,7 @@ typedef struct Seg {
 class Snake
 {
 public:
+    Snake();
     Snake(unsigned int starting_size);
     void setHeadPosition(unsigned int X, unsigned int Y);
     void move(unsigned int positions);

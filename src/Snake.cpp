@@ -1,7 +1,13 @@
 #include"../include/Snake.hpp"
 #define HEAD 0
+#define STARTING_SIZE 5
 
-Snake::Snake(unsigned int starting_size = 5)
+Snake::Snake()
+{
+    Snake(STARTING_SIZE);
+}
+
+Snake::Snake(unsigned int starting_size)
 {
     _SnakeSegments.reserve(starting_size);
     for (unsigned int i=0; i < starting_size; ++i)
@@ -12,7 +18,7 @@ Snake::Snake(unsigned int starting_size = 5)
 
 void Snake::setHeadPosition(unsigned int posX, unsigned int posY)
 {
-    _SnakeSegments[HEAD].X = posX;   
+    _SnakeSegments[HEAD].X = posX;
     _SnakeSegments[HEAD].Y = posY;
 }
 

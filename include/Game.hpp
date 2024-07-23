@@ -2,13 +2,16 @@
 #define GAME_HPP
 
 #include"./Snake.hpp"
+#include"./Board.hpp"
 
 class Game
 {
 private:
-    std::vector<std::pair<int,int>> SnakePos;
+    Snake _snake;
+    Board _board;
 public:
-    Game(Snake* snake);
+    Game(Snake snake, Board board);
+    void run();
 };
 
 #endif // GAME_HPP
